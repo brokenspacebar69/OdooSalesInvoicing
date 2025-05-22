@@ -1,0 +1,20 @@
+ion-content {
+    background: #f6f8fc;
+  }
+  
+  ion-card {
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .status-paid {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .status-pending {
+    color: #e67e22;
+    font-weight: bold;
+  }
+  

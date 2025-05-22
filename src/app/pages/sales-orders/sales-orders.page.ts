@@ -12,6 +12,7 @@ interface SalesOrder {
   selector: 'app-sales-orders',
   templateUrl: './sales-orders.page.html',
   styleUrls: ['./sales-orders.page.scss'],
+  standalone: false,
 })
 export class SalesOrdersPage implements OnInit {
   salesOrders: SalesOrder[] = [];

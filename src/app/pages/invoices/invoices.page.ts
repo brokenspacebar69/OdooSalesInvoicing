@@ -13,11 +13,10 @@ interface Invoice {
   selector: 'app-invoices',
   templateUrl: './invoices.page.html',
   styleUrls: ['./invoices.page.scss'],
+  standalone: false,
 })
 export class InvoicesPage implements OnInit {
-  invoices: Invoice[] = []; // Define the type explicitly
-
-  constructor() { }
+  invoices: Invoice[] = [];
 
   ngOnInit() {
     this.invoices = [

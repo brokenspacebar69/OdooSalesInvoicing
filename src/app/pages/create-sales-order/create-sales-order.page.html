@@ -1,4 +1,3 @@
-<!-- src/app/pages/create-sales-order/create-sales-order.page.html -->
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -8,28 +7,38 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <form [formGroup]="orderForm" (ngSubmit)="createOrder()">
-    <ion-item>
-      <ion-label position="floating">Customer</ion-label>
-      <ion-input formControlName="customer"></ion-input>
-    </ion-item>
-    
-    <ion-item>
-      <ion-label position="floating">Product</ion-label>
-      <ion-input formControlName="product"></ion-input>
-    </ion-item>
-    
-    <ion-item>
-      <ion-label position="floating">Quantity</ion-label>
-      <ion-input type="number" formControlName="quantity"></ion-input>
-    </ion-item>
-    
-    <ion-item>
-      <ion-label position="floating">Date</ion-label>
-      <ion-datetime formControlName="date"></ion-datetime>
-    </ion-item>
-    
-    <ion-button expand="block" type="submit" [disabled]="!orderForm.valid">Create Order</ion-button>
-  </form>
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Order Details</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="orderForm" (ngSubmit)="createOrder()">
+        <ion-item>
+          <ion-label position="floating">Customer</ion-label>
+          <ion-input formControlName="customer" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Product</ion-label>
+          <ion-input formControlName="product" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Quantity</ion-label>
+          <ion-input type="number" formControlName="quantity" min="1"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Date</ion-label>
+          <ion-datetime formControlName="date" presentation="date"></ion-datetime>
+        </ion-item>
+
+        <ion-button expand="block" type="submit" [disabled]="!orderForm.valid">
+          <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+          Create Order
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

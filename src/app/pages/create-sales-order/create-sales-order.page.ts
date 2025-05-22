@@ -6,11 +6,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   selector: 'app-create-sales-order',
   templateUrl: './create-sales-order.page.html',
   styleUrls: ['./create-sales-order.page.scss'],
+  standalone: false,
+
 })
 export class CreateSalesOrderPage implements OnInit {
-  orderForm: FormGroup = new FormGroup({}); // Initialize here
+  orderForm: FormGroup = new FormGroup({});
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.orderForm = this.formBuilder.group({
