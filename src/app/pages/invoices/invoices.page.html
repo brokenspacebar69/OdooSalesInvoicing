@@ -1,0 +1,21 @@
+<!-- src/app/pages/invoices/invoices.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Invoices</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let invoice of invoices">
+      <ion-label>
+        <h2>{{invoice.customer}}</h2>
+        <p>Amount: ${{invoice.amount}}</p>
+        <p>Date: {{invoice.date}}</p>
+        <p [ngClass]="invoice.status === 'Paid' ? 'status-paid' : 'status-pending'">
+          Status: {{invoice.status}}
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

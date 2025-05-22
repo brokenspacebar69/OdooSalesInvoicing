@@ -1,0 +1,7 @@
+{
+  "name": "odoo-sales-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
